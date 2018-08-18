@@ -33,7 +33,7 @@ module.exports = {
   },
 
   // Database
-  databaseUrl: process.env.DATABASE_URL || 'sqlite:database.sqlite',
+  databaseUrl: 'sqlite:database.sqlite',
 
   // Web analytics
   analytics: {
@@ -43,6 +43,11 @@ module.exports = {
 
   // Authentication
   auth: {
+    auth0: {
+      domain: process.env.AUTH0_DOMAIN,
+      id: process.env.AUTH0_ID,
+      secret: process.env.AUTH0_SECRET,
+    },
     jwt: { secret: process.env.JWT_SECRET || 'React Starter Kit' },
 
     // https://developers.facebook.com/
