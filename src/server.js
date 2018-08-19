@@ -178,6 +178,7 @@ app.get('*', async (req, res, next) => {
     data.scripts = Array.from(scripts);
     data.app = {
       apiUrl: config.api.clientUrl,
+      auth0: config.auth.auth0,
     };
 
     const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);

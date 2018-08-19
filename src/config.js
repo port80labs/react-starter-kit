@@ -46,7 +46,6 @@ module.exports = {
     auth0: {
       domain: process.env.AUTH0_DOMAIN,
       clientId: process.env.AUTH0_ID,
-      secret: process.env.AUTH0_SECRET,
       callbackUrl: process.env.AUTH0_CALLBACK,
     },
     jwt: { secret: process.env.JWT_SECRET || 'React Starter Kit' },

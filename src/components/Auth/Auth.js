@@ -4,16 +4,17 @@ import Cookies from 'js-cookie';
 import history from '../../history';
 
 export default class Auth {
-  auth0 = new auth0.WebAuth({
-    domain: 'xxxxx',
-    clientID: 'xxxxx',
-    redirectUri: 'xxxxx',
-    audience: 'xxxxx',
-    responseType: 'token id_token',
-    scope: 'openid',
-  });
-
   constructor() {
+    if (process.env.BROWSER) {
+      this.auth0 = new auth0.WebAuth({
+        domain: window.App.auth0.domain,
+        clientID: window.App.auth0.clientId,
+        redirectUri: window.App.auth0.callbackUrl,
+        audience: `https://${window.App.auth0.domain}/userinfo`,
+        responseType: 'token id_token',
+        scope: 'openid',
+      });
+    }
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
     this.handleAuthentication = this.handleAuthentication.bind(this);
