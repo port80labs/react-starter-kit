@@ -46,6 +46,8 @@ const scrollPositionsHistory = {};
 // Re-render the app when window.location changes
 async function onLocationChange(location, action) {
   // Remember the latest scroll position for the previous location
+  console.log(location);
+  console.log(queryString.parse(location.hash));
   scrollPositionsHistory[currentLocation.key] = {
     scrollX: window.pageXOffset,
     scrollY: window.pageYOffset,
@@ -60,6 +62,7 @@ async function onLocationChange(location, action) {
   try {
     context.pathname = location.pathname;
     context.query = queryString.parse(location.search);
+    context.hash = queryString.parse(location.hash);
 
     // Traverses the list of routes in the order they are defined until
     // it finds the first route that matches provided URL path string

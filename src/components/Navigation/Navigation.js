@@ -8,7 +8,6 @@
  */
 
 import React from 'react';
-import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Navigation.css';
 import Link from '../Link';
@@ -26,25 +25,29 @@ class Navigation extends React.Component {
         </Link>
         <span className={s.spacer}> | </span>
         {this.props.auth.isAuthenticated() ? (
-          <Link
+          <a
             className={s.link}
-            to="/logout"
-            onClick={() => {
+            href="/logout"
+            onClick={e => {
+              e.preventDefault();
               this.props.auth.logout();
+              return false;
             }}
           >
             Logout
-          </Link>
+          </a>
         ) : (
-          <Link
+          <a
             className={s.link}
-            to="/login"
-            onClick={() => {
+            href="/login"
+            onClick={e => {
+              e.preventDefault();
               this.props.auth.login();
+              return false;
             }}
           >
             Log in
-          </Link>
+          </a>
         )}
       </div>
     );

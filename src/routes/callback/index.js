@@ -8,16 +8,20 @@
  */
 
 import React from 'react';
-import Home from './Home';
 import Layout from '../../components/Layout';
+import Callback from '../../components/Callback/Callback';
+import Auth from '../../components/Auth/Auth';
 
-async function action() {
+function action(context) {
+  const auth = new Auth();
+
+  if (context.hash && context.hash.access_token) {
+    auth.handleAuthentication();
+  }
   return {
-    title: 'React Starter Kit',
-    chunks: ['home'],
     component: (
       <Layout>
-        <Home />
+        <Callback />
       </Layout>
     ),
   };

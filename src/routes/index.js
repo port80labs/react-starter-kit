@@ -24,10 +24,6 @@ const routes = {
       load: () => import(/* webpackChunkName: 'contact' */ './contact'),
     },
     {
-      path: '/login',
-      load: () => import(/* webpackChunkName: 'login' */ './login'),
-    },
-    {
       path: '/register',
       load: () => import(/* webpackChunkName: 'register' */ './register'),
     },
@@ -42,6 +38,10 @@ const routes = {
     {
       path: '/admin',
       load: () => import(/* webpackChunkName: 'admin' */ './admin'),
+    },
+    {
+      path: '/callback',
+      load: () => import(/* webpackChunkName: 'callback' */ './callback'),
     },
 
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
