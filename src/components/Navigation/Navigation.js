@@ -26,33 +26,39 @@ class Navigation extends React.Component {
         </Link>
         <span className={s.spacer}> | </span>
         <AuthContext.Consumer>
-          {auth =>
-            auth.isAuthenticated() ? (
-              <a
-                className={s.link}
-                href="/logout"
-                onClick={e => {
-                  e.preventDefault();
-                  auth.logout();
-                  return false;
-                }}
-              >
-                Logout
-              </a>
-            ) : (
-              <a
-                className={s.link}
-                href="/login"
-                onClick={e => {
-                  e.preventDefault();
-                  auth.login();
-                  return false;
-                }}
-              >
-                Log in
-              </a>
-            )
-          }
+          {auth => {
+            const { isAuthenticated, login, logout } = auth;
+            return (
+              <React.Fragment>
+                {isAuthenticated() && (
+                  <a
+                    className={s.link}
+                    href="/logout"
+                    onClick={e => {
+                      e.preventDefault();
+                      logout();
+                      return false;
+                    }}
+                  >
+                    Logout
+                  </a>
+                )}
+                {!isAuthenticated() && (
+                  <a
+                    className={s.link}
+                    href="/login"
+                    onClick={e => {
+                      e.preventDefault();
+                      login();
+                      return false;
+                    }}
+                  >
+                    Log in
+                  </a>
+                )}
+              </React.Fragment>
+            );
+          }}
         </AuthContext.Consumer>
       </div>
     );
