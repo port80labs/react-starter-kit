@@ -10,17 +10,19 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Callback from '../../components/Callback/Callback';
-import Auth from '../../components/Auth/Auth';
+import AuthContext from '../../context';
 
 function action(context) {
-  const auth = new Auth();
-
-  if (context.hash && context.hash.access_token) {
-    auth.handleAuthentication();
-  }
   return {
     component: (
       <Layout>
+        <AuthContext.Consumer>
+          {auth => {
+            if (context.hash && context.hash.access_token) {
+              auth.handleAuthentication();
+            }
+          }}
+        </AuthContext.Consumer>
         <Callback />
       </Layout>
     ),
