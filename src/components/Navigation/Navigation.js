@@ -11,6 +11,7 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Navigation.css';
 import Link from '../Link';
+import AuthContext from '../../context';
 
 class Navigation extends React.Component {
   render() {
@@ -24,31 +25,35 @@ class Navigation extends React.Component {
           Contact
         </Link>
         <span className={s.spacer}> | </span>
-        {this.props.auth.isAuthenticated() ? (
-          <a
-            className={s.link}
-            href="/logout"
-            onClick={e => {
-              e.preventDefault();
-              this.props.auth.logout();
-              return false;
-            }}
-          >
-            Logout
-          </a>
-        ) : (
-          <a
-            className={s.link}
-            href="/login"
-            onClick={e => {
-              e.preventDefault();
-              this.props.auth.login();
-              return false;
-            }}
-          >
-            Log in
-          </a>
-        )}
+        <AuthContext.Consumer>
+          {auth =>
+            auth.isAuthenticated() ? (
+              <a
+                className={s.link}
+                href="/logout"
+                onClick={e => {
+                  e.preventDefault();
+                  auth.logout();
+                  return false;
+                }}
+              >
+                Logout
+              </a>
+            ) : (
+              <a
+                className={s.link}
+                href="/login"
+                onClick={e => {
+                  e.preventDefault();
+                  auth.login();
+                  return false;
+                }}
+              >
+                Log in
+              </a>
+            )
+          }
+        </AuthContext.Consumer>
       </div>
     );
   }
