@@ -155,6 +155,8 @@
     "test-watch": "yarn run test --watch --notify",
     "test-cover": "yarn run test --coverage",
     "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
+    "semantic:build": "cd semantic && npx gulp build",
+    "semantic:watch": "cd semantic && npx gulp watch",
     "clean": "babel-node tools/run clean",
     "copy": "babel-node tools/run copy",
     "bundle": "babel-node tools/run bundle",
