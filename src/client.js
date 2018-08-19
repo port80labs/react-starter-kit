@@ -46,8 +46,7 @@ const scrollPositionsHistory = {};
 // Re-render the app when window.location changes
 async function onLocationChange(location, action) {
   // Remember the latest scroll position for the previous location
-  console.log(location);
-  console.log(queryString.parse(location.hash));
+
   scrollPositionsHistory[currentLocation.key] = {
     scrollX: window.pageXOffset,
     scrollY: window.pageYOffset,
