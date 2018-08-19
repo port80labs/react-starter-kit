@@ -30,8 +30,7 @@ export default class Auth {
         this.setSession(authResult);
         history.replace('/');
       } else if (err) {
-        history.push('/');
-        alert(`Error: ${err.error}. Check the console for further details.`);
+        history.push('/error');
       }
     });
   }
