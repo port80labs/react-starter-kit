@@ -18,6 +18,7 @@ import createFetch from './createFetch';
 import history from './history';
 import { updateMeta } from './DOMUtils';
 import router from './router';
+import { Auth } from './context';
 
 // Global (context) variables that can be easily accessed from any React component
 // https://facebook.github.io/react/docs/context.html
@@ -59,10 +60,13 @@ async function onLocationChange(location, action) {
 
   const isInitialRender = !action;
   try {
+    const auth = new Auth();
     context.pathname = location.pathname;
     context.query = queryString.parse(location.search);
     context.hash = queryString.parse(location.hash);
-
+    try {
+      context.user = await auth.getProfile();
+    } catch (e) {}
     // Traverses the list of routes in the order they are defined until
     // it finds the first route that matches provided URL path string
     // and whose action method returns anything other than `undefined`.

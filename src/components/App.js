@@ -9,6 +9,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { UserContext } from '../context';
 
 const ContextType = {
   // Enables critical path CSS rendering
@@ -19,6 +20,7 @@ const ContextType = {
   pathname: PropTypes.string.isRequired,
   query: PropTypes.object,
   hash: PropTypes.object,
+  user: PropTypes.object,
 };
 
 /**
@@ -43,6 +45,7 @@ const ContextType = {
  *     container,
  *   );
  */
+
 class App extends React.PureComponent {
   static propTypes = {
     context: PropTypes.shape(ContextType).isRequired,
@@ -58,7 +61,11 @@ class App extends React.PureComponent {
   render() {
     // NOTE: If you need to add or modify header, footer etc. of the app,
     // please do that inside the Layout component.
-    return React.Children.only(this.props.children);
+    return (
+      <UserContext.Provider value={this.props.context.user}>
+        {this.props.children}
+      </UserContext.Provider>
+    );
   }
 }
 

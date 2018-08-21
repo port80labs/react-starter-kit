@@ -19,6 +19,7 @@ import nodeFetch from 'node-fetch';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import PrettyError from 'pretty-error';
+import jwksRsa from 'jwks-rsa';
 import App from './components/App';
 import Html from './components/Html';
 import { ErrorPageWithoutStyle } from './routes/error/ErrorPage';
@@ -66,8 +67,15 @@ app.use(bodyParser.json());
 // -----------------------------------------------------------------------------
 app.use(
   expressJwt({
-    secret: config.auth.jwt.secret,
+    secret: jwksRsa.expressJwtSecret({
+      cache: true,
+      rateLimit: true,
+      jwksRequestsPerMinute: 5,
+      jwksUri: `https://${config.auth.auth0.domain}/.well-known/jwks.json`,
+    }),
     credentialsRequired: false,
+    issuer: `https://${config.auth.auth0.domain}/`,
+    algorithms: ['RS256'],
     getToken: req => req.cookies.id_token,
   }),
 );
@@ -78,6 +86,8 @@ app.use((err, req, res, next) => {
     console.error('[express-jwt-error]', req.cookies.id_token);
     // `clearCookie`, otherwise user can't use web-app until cookie expires
     res.clearCookie('id_token');
+    res.clearCookie('access_token');
+    res.clearCookie('expires_at');
   }
   next(err);
 });
@@ -124,7 +134,6 @@ app.use(
 app.get('*', async (req, res, next) => {
   try {
     const css = new Set();
-
     // Enables critical path CSS rendering
     // https://github.com/kriasoft/isomorphic-style-loader
     const insertCss = (...styles) => {
@@ -148,6 +157,7 @@ app.get('*', async (req, res, next) => {
       // The twins below are wild, be careful!
       pathname: req.path,
       query: req.query,
+      user: req.user,
     };
 
     const route = await router.resolve(context);
