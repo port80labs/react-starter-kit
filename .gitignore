@@ -30,3 +30,4 @@ yarn-error.log*
 
 # semantic
 semantic/dist/components
+docker-compose.yml
