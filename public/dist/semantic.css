@@ -598,7 +598,7 @@ h1 {
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 1.71428571rem;
 }
 
 h3 {
@@ -651,12 +651,12 @@ p:last-child {
 --------------------*/
 
 a {
-  color: #22c1bb;
+  color: #4183C4;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0ab7b1;
+  color: #1e70bf;
   text-decoration: none;
 }
 
@@ -14317,7 +14317,7 @@ a.ui.basic.black.label:hover {
 a.ui.basic.label:hover {
   text-decoration: none;
   background: none #FFFFFF;
-  color: #0ab7b1;
+  color: #1e70bf;
   -webkit-box-shadow: 1px solid rgba(34, 36, 38, 0.15);
   box-shadow: 1px solid rgba(34, 36, 38, 0.15);
   -webkit-box-shadow: none;
@@ -23466,7 +23466,7 @@ Floated Menu / Item
 
 .ui.cards > .card > .content > a.header:hover,
 .ui.card > .content > a.header:hover {
-  color: #0ab7b1;
+  color: #1e70bf;
 }
 
 /* Meta */
@@ -23586,7 +23586,7 @@ Floated Menu / Item
 
 .ui.cards > .card > .extra a:not(.ui):hover,
 .ui.card > .extra a:not(.ui):hover {
-  color: #0ab7b1;
+  color: #1e70bf;
 }
 
 /*******************************
