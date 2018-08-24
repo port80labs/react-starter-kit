@@ -11,7 +11,7 @@ database.sqlite
 
 # Test coverage
 coverage
-
+data/*
 # Logs
 npm-debug.log*
 yarn-debug.log*

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: node:latest
+    build: .
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - .:/usr/src/app
+    container_name: APP-react-web
+    working_dir: /usr/src/app
+    environment:
+      - AUTH0_DOMAIN=
+      - AUTH0_ID=
+      - AUTH0_SECRET=
+    command: ["yarn","start"]
