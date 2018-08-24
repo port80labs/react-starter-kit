@@ -17,6 +17,7 @@ import s from './Layout.css';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+import Auth from '../Auth/Auth';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -24,10 +25,17 @@ class Layout extends React.Component {
   };
 
   render() {
+    const auth = new Auth();
+    const { children } = this.props;
+
+    const childrenWithProps = React.Children.map(children, child =>
+      React.cloneElement(child, { auth }),
+    );
+
     return (
       <div>
-        <Header />
-        {this.props.children}
+        <Header auth={auth} />
+        {childrenWithProps}
         <Feedback />
         <Footer />
       </div>
