@@ -21268,6 +21268,15 @@ Floated Menu / Item
 /*******************************
          Site Overrides
 *******************************/
+
+#navigation-login.ui.text.menu {
+  min-height: inherit;
+  margin: 0px;
+}
+
+#navigation-login.ui.text.menu .item {
+  color: #fff;
+}
 /*!
  * # Semantic UI 2.3.3 - Message
  * http://github.com/semantic-org/semantic-ui/

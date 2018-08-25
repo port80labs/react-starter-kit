@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import { Button } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 import AuthContext from '../../context';
 
 class Login extends React.Component {
@@ -18,17 +18,16 @@ class Login extends React.Component {
         {auth => {
           const { login } = auth;
           return (
-            <div>
-              <Button
+            <Menu text id="navigation-login">
+              <Menu.Item
+                name="Login"
                 onClick={e => {
                   e.preventDefault();
                   login();
                   return false;
                 }}
-              >
-                Login
-              </Button>
-            </div>
+              />
+            </Menu>
           );
         }}
       </AuthContext.Consumer>

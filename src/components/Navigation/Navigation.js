@@ -17,7 +17,7 @@ import { UserContext } from '../../context';
 class Navigation extends React.Component {
   render() {
     return (
-      <div className={s.root} role="navigation">
+      <div className={s.root} role="navigation" id="navigation-menu">
         <UserContext.Consumer>
           {user => (user ? <UserMenu /> : <Login />)}
         </UserContext.Consumer>
