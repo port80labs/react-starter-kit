@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import { Icon, Button } from 'semantic-ui-react';
+import { Icon, Dropdown } from 'semantic-ui-react';
 import AuthContext, { UserContext } from '../../context';
 
 class UserMenu extends React.Component {
@@ -20,18 +20,22 @@ class UserMenu extends React.Component {
           return (
             <UserContext.Consumer>
               {user => (
-                <div>
-                  <Icon name="user circle" size="large" />
-                  <Button
-                    onClick={e => {
-                      e.preventDefault();
-                      logout();
-                      return false;
-                    }}
-                  >
-                    {user.name}
-                  </Button>
-                </div>
+                <Dropdown
+                  text={user.name}
+                  icon={<Icon name="user circle" className="user-icon" />}
+                  id="navigation-user"
+                >
+                  <Dropdown.Menu>
+                    <Dropdown.Item
+                      text="Logout"
+                      onClick={e => {
+                        e.preventDefault();
+                        logout();
+                        return false;
+                      }}
+                    />
+                  </Dropdown.Menu>
+                </Dropdown>
               )}
             </UserContext.Consumer>
           );

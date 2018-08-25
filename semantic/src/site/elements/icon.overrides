@@ -1,3 +1,6 @@
 /*******************************
          Site Overrides
 *******************************/
+#navigation-user .icon.user-icon {
+  margin-left: 5px;
+}

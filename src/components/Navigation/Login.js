@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Icon } from 'semantic-ui-react';
 import AuthContext from '../../context';
 
 class Login extends React.Component {
@@ -21,6 +21,7 @@ class Login extends React.Component {
             <Menu text id="navigation-login">
               <Menu.Item
                 name="Login"
+                icon={<Icon name="sign in" className="user-icon" />}
                 onClick={e => {
                   e.preventDefault();
                   login();
