@@ -17,10 +17,14 @@ module.exports = () => ({
   plugins: [
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/postcss/postcss-import
-    require('postcss-import')(),
+    require('postcss-import')({
+      skipDuplicates: false,
+    }),
     // W3C variables, e.g. :root { --color: red; } div { background: var(--color); }
     // https://github.com/postcss/postcss-custom-properties
-    require('postcss-custom-properties')(),
+    require('postcss-custom-properties')({
+      importFrom: '../src/components/variables.css',
+    }),
     // W3C CSS Custom Media Queries, e.g. @custom-media --small-viewport (max-width: 30em);
     // https://github.com/postcss/postcss-custom-media
     require('postcss-custom-media')(),
