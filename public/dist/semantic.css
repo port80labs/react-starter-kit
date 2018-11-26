@@ -1,5 +1,5 @@
  /*
- * # Semantic UI - 2.3.3
+ * # Semantic UI - 2.4.2
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -10,7 +10,7 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 /*!
- * # Semantic UI 2.3.3 - Reset
+ * # Semantic UI 2.4.2 - Reset
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -541,7 +541,7 @@ template {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Site
+ * # Semantic UI 2.4.2 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -675,11 +675,6 @@ a:hover {
   color: rgba(0, 0, 0, 0.87);
 }
 
-::-moz-selection {
-  background-color: #CCE2FF;
-  color: rgba(0, 0, 0, 0.87);
-}
-
 ::selection {
   background-color: #CCE2FF;
   color: rgba(0, 0, 0, 0.87);
@@ -689,12 +684,6 @@ a:hover {
 
 textarea::-webkit-selection,
 input::-webkit-selection {
-  background-color: rgba(100, 100, 100, 0.4);
-  color: rgba(0, 0, 0, 0.87);
-}
-
-textarea::-moz-selection,
-input::-moz-selection {
   background-color: rgba(100, 100, 100, 0.4);
   color: rgba(0, 0, 0, 0.87);
 }
@@ -760,7 +749,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Button
+ * # Semantic UI 2.4.2 - Button
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -2103,7 +2092,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 
 .ui.eight.buttons > .button {
-  width: 12.500%;
+  width: 12.5%;
 }
 
 .ui.nine.buttons {
@@ -2173,7 +2162,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 
 .ui.eight.vertical.buttons > .button {
-  height: 12.500%;
+  height: 12.5%;
 }
 
 .ui.nine.vertical.buttons > .button {
@@ -5121,7 +5110,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Container
+ * # Semantic UI 2.4.2 - Container
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -5282,7 +5271,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Header
+ * # Semantic UI 2.4.2 - Header
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -6109,7 +6098,7 @@ a.ui.inverted.grey.header:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Icon
+ * # Semantic UI 2.4.2 - Icon
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -11882,11 +11871,11 @@ i.icon.window.restore.outline:before {
   content: "\f2d2";
 }
 
-i.icon.disk.outline:before {
-  content: "\f369";
-}
-
 /* Outline Aliases */
+
+i.icon.disk.outline:before {
+  content: "\f0a0";
+}
 
 i.icon.heart.empty,
 i.icon.star.empty {
@@ -12265,7 +12254,7 @@ i.icon.youtube.square {
   margin-left: 5px;
 }
 /*!
- * # Semantic UI 2.3.3 - Image
+ * # Semantic UI 2.4.2 - Image
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -12587,7 +12576,7 @@ img.ui.bordered.image {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Input
+ * # Semantic UI 2.4.2 - Input
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -13159,7 +13148,7 @@ img.ui.bordered.image {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Label
+ * # Semantic UI 2.4.2 - Label
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -13505,16 +13494,16 @@ a.ui.label {
 /* Positioning */
 
 .ui.ribbon.label {
-  left: calc( -1rem  -  1.2em );
+  left: calc(-1rem - 1.2em);
   margin-right: -1.2em;
-  padding-left: calc( 1rem  +  1.2em );
+  padding-left: calc(1rem + 1.2em);
   padding-right: 1.2em;
 }
 
 .ui[class*="right ribbon"].label {
-  left: calc(100% +  1rem  +  1.2em );
+  left: calc(100% + 1rem + 1.2em);
   padding-left: 1.2em;
-  padding-right: calc( 1rem  +  1.2em );
+  padding-right: calc(1rem + 1.2em);
 }
 
 /* Right Ribbon */
@@ -13545,23 +13534,23 @@ a.ui.label {
 
 .ui.card .image > .ui.ribbon.label,
 .ui.image > .ui.ribbon.label {
-  left: calc( 0.05rem  -  1.2em );
+  left: calc(--0.05rem - 1.2em);
 }
 
 .ui.card .image > .ui[class*="right ribbon"].label,
 .ui.image > .ui[class*="right ribbon"].label {
-  left: calc(100% +  -0.05rem  +  1.2em );
+  left: calc(100% + -0.05rem + 1.2em);
   padding-left: 0.833em;
 }
 
 /* Inside Table */
 
 .ui.table td > .ui.ribbon.label {
-  left: calc( -0.78571429em  -  1.2em );
+  left: calc(-0.78571429em - 1.2em);
 }
 
 .ui.table td > .ui[class*="right ribbon"].label {
-  left: calc(100% +  0.78571429em  +  1.2em );
+  left: calc(100% + 0.78571429em + 1.2em);
   padding-left: 0.833em;
 }
 
@@ -13740,7 +13729,7 @@ a.ui.red.label:hover {
 /* Basic */
 
 .ui.basic.red.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #DB2828 !important;
   border-color: #DB2828 !important;
 }
@@ -13786,7 +13775,7 @@ a.ui.orange.label:hover {
 /* Basic */
 
 .ui.basic.orange.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #F2711C !important;
   border-color: #F2711C !important;
 }
@@ -13832,7 +13821,7 @@ a.ui.yellow.label:hover {
 /* Basic */
 
 .ui.basic.yellow.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #FBBD08 !important;
   border-color: #FBBD08 !important;
 }
@@ -13878,7 +13867,7 @@ a.ui.olive.label:hover {
 /* Basic */
 
 .ui.basic.olive.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #B5CC18 !important;
   border-color: #B5CC18 !important;
 }
@@ -13924,7 +13913,7 @@ a.ui.green.label:hover {
 /* Basic */
 
 .ui.basic.green.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #21BA45 !important;
   border-color: #21BA45 !important;
 }
@@ -13970,7 +13959,7 @@ a.ui.teal.label:hover {
 /* Basic */
 
 .ui.basic.teal.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #00B5AD !important;
   border-color: #00B5AD !important;
 }
@@ -14016,7 +14005,7 @@ a.ui.blue.label:hover {
 /* Basic */
 
 .ui.basic.blue.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #2185D0 !important;
   border-color: #2185D0 !important;
 }
@@ -14062,7 +14051,7 @@ a.ui.violet.label:hover {
 /* Basic */
 
 .ui.basic.violet.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #6435C9 !important;
   border-color: #6435C9 !important;
 }
@@ -14108,7 +14097,7 @@ a.ui.purple.label:hover {
 /* Basic */
 
 .ui.basic.purple.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #A333C8 !important;
   border-color: #A333C8 !important;
 }
@@ -14154,7 +14143,7 @@ a.ui.pink.label:hover {
 /* Basic */
 
 .ui.basic.pink.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #E03997 !important;
   border-color: #E03997 !important;
 }
@@ -14200,7 +14189,7 @@ a.ui.brown.label:hover {
 /* Basic */
 
 .ui.basic.brown.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #A5673F !important;
   border-color: #A5673F !important;
 }
@@ -14246,7 +14235,7 @@ a.ui.grey.label:hover {
 /* Basic */
 
 .ui.basic.grey.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #767676 !important;
   border-color: #767676 !important;
 }
@@ -14292,7 +14281,7 @@ a.ui.black.label:hover {
 /* Basic */
 
 .ui.basic.black.label {
-  background-color: none #FFFFFF !important;
+  background: none #FFFFFF !important;
   color: #1B1C1D !important;
   border-color: #1B1C1D !important;
 }
@@ -14590,7 +14579,7 @@ a.ui.basic.label:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Segment
+ * # Semantic UI 2.4.2 - Segment
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -14702,6 +14691,74 @@ a.ui.basic.label:hover {
 /*******************************
              Types
 *******************************/
+
+/*-------------------
+     Placeholder
+--------------------*/
+
+.ui.placeholder.segment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  max-width: initial;
+  -webkit-animation: none;
+  animation: none;
+  overflow: visible;
+  padding: 1em 1em;
+  min-height: 18rem;
+  background: #F9FAFB;
+  border-color: rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0px 2px 25px 0 rgba(34, 36, 38, 0.05) inset;
+  box-shadow: 0px 2px 25px 0 rgba(34, 36, 38, 0.05) inset;
+}
+
+.ui.placeholder.segment .button,
+.ui.placeholder.segment textarea {
+  display: block;
+}
+
+.ui.placeholder.segment .field,
+.ui.placeholder.segment textarea,
+.ui.placeholder.segment > .ui.input,
+.ui.placeholder.segment .button {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui.placeholder.segment .column .button,
+.ui.placeholder.segment .column .field,
+.ui.placeholder.segment .column textarea,
+.ui.placeholder.segment .column > .ui.input {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui.placeholder.segment > .inline {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.ui.placeholder.segment > .inline > .button {
+  display: inline-block;
+  width: auto;
+  margin: 0px 0.35714286rem 0px 0px;
+}
+
+.ui.placeholder.segment > .inline > .button:last-child {
+  margin-right: 0px;
+}
 
 /*-------------------
         Piled
@@ -15397,8 +15454,8 @@ a.ui.basic.label:hover {
   bottom: 0px;
   border-radius: 0px;
   margin: 0em -1px;
-  width: calc(100% +  2px );
-  max-width: calc(100% +  2px );
+  width: calc(100% - (-1px * 2));
+  max-width: calc(100% - (-1px * 2));
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid #D4D4D5;
@@ -15490,7 +15547,7 @@ a.ui.basic.label:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Form
+ * # Semantic UI 2.4.2 - Form
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -15823,7 +15880,7 @@ a.ui.basic.label:hover {
 }
 
 .ui.form :-ms-input-placeholder {
-  color: rgba(191, 191, 191, 0.87);
+  color: rgba(191, 191, 191, 0.87) !important;
 }
 
 .ui.form ::-moz-placeholder {
@@ -15835,7 +15892,7 @@ a.ui.basic.label:hover {
 }
 
 .ui.form :focus:-ms-input-placeholder {
-  color: rgba(115, 115, 115, 0.87);
+  color: rgba(115, 115, 115, 0.87) !important;
 }
 
 .ui.form :focus::-moz-placeholder {
@@ -16669,7 +16726,7 @@ a.ui.basic.label:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Grid
+ * # Semantic UI 2.4.2 - Grid
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -16829,7 +16886,7 @@ a.ui.basic.label:hover {
 }
 
 .ui.grid .column + .ui.vertical.divider {
-  height: calc(50% -  1rem );
+  height: calc(50% - (2rem / 2));
 }
 
 /* Remove Border on Last Horizontal Segment */
@@ -17916,7 +17973,7 @@ a.ui.basic.label:hover {
   content: "";
   top: 0em;
   left: 0px;
-  width: calc(100% -  2rem );
+  width: calc(100% - 2rem);
   height: 1px;
   margin: 0% 1rem;
   -webkit-box-shadow: 0px -1px 0px 0px rgba(34, 36, 38, 0.15);
@@ -17961,13 +18018,13 @@ a.ui.basic.label:hover {
 .ui.relaxed[class*="vertically divided"].grid > .row:before {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  width: calc(100% -  3rem );
+  width: calc(100% - 3rem);
 }
 
 .ui[class*="very relaxed"][class*="vertically divided"].grid > .row:before {
-  margin-left: 5rem;
-  margin-right: 5rem;
-  width: calc(100% -  5rem );
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  width: calc(100% - 5rem);
 }
 
 /*----------------------
@@ -19263,7 +19320,7 @@ a.ui.basic.label:hover {
   display: inline-block;
   font-size: 1em !important;
   float: none;
-  margin: 0em 0.75em 0em 0em;
+  margin: 0em 0.75em 0em 0em !important;
 }
 
 /* Secondary */
@@ -19491,7 +19548,7 @@ Floated Menu / Item
 /* Left Floated */
 
 .ui.menu:not(.vertical) .left.item,
-.ui.menu:not(.vertical) .left.menu {
+.ui.menu:not(.vertical) :not(.dropdown) > .left.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19651,7 +19708,7 @@ Floated Menu / Item
 }
 
 .ui.tabular.fluid.menu {
-  width: calc(100% +  2px ) !important;
+  width: calc(100% + (1px * 2)) !important;
 }
 
 .ui.tabular.menu .item {
@@ -19702,7 +19759,7 @@ Floated Menu / Item
 
 .top.attached.segment + .ui.bottom.tabular.menu {
   position: relative;
-  width: calc(100% +  2px );
+  width: calc(100% + (1px * 2));
   left: -1px;
 }
 
@@ -20933,7 +20990,7 @@ Floated Menu / Item
 }
 
 .ui.menu.eight.item .item {
-  width: 12.500%;
+  width: 12.5%;
 }
 
 .ui.menu.nine.item .item {
@@ -20941,7 +20998,7 @@ Floated Menu / Item
 }
 
 .ui.menu.ten.item .item {
-  width: 10.0%;
+  width: 10%;
 }
 
 .ui.menu.eleven.item .item {
@@ -21115,8 +21172,8 @@ Floated Menu / Item
   bottom: 0px;
   border-radius: 0px;
   margin: 0em -1px;
-  width: calc(100% +  2px );
-  max-width: calc(100% +  2px );
+  width: calc(100% - (-1px * 2));
+  max-width: calc(100% - (-1px * 2));
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -21285,7 +21342,7 @@ Floated Menu / Item
   padding: 0;
 }
 /*!
- * # Semantic UI 2.3.3 - Message
+ * # Semantic UI 2.4.2 - Message
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -21855,7 +21912,7 @@ Floated Menu / Item
         Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Table
+ * # Semantic UI 2.4.2 - Table
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -22478,8 +22535,8 @@ Floated Menu / Item
   bottom: 0px;
   border-radius: 0px;
   margin: 0em -1px;
-  width: calc(100% +  2px );
-  max-width: calc(100% +  2px );
+  width: calc(100% - (-1px * 2));
+  max-width: calc(100% - (-1px * 2));
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid #D4D4D5;
@@ -23150,7 +23207,7 @@ Floated Menu / Item
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Item
+ * # Semantic UI 2.4.2 - Item
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -24257,7 +24314,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Feed
+ * # Semantic UI 2.4.2 - Feed
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -24570,7 +24627,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Checkbox
+ * # Semantic UI 2.4.2 - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -25245,7 +25302,7 @@ a.ui.card:hover,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Dropdown
+ * # Semantic UI 2.4.2 - Dropdown
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -25797,7 +25854,7 @@ select.ui.dropdown {
 
 .ui.active.selection.dropdown > .dropdown.icon,
 .ui.visible.selection.dropdown > .dropdown.icon {
-  opacity: 1;
+  opacity: '';
   z-index: 3;
 }
 
@@ -26040,7 +26097,7 @@ select.ui.dropdown {
 }
 
 .ui.inline.dropdown .dropdown.icon {
-  margin: 0em 0.5em 0em 0.21428571em;
+  margin: 0em 0.21428571em 0em 0.21428571em;
   vertical-align: baseline;
 }
 
@@ -26272,6 +26329,20 @@ select.ui.dropdown {
 }
 
 /*--------------------
+        Clear
+----------------------*/
+
+.ui.dropdown > .clear.dropdown.icon {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+.ui.dropdown > .clear.dropdown.icon:hover {
+  opacity: 1;
+}
+
+/*--------------------
         Disabled
 ----------------------*/
 
@@ -26469,7 +26540,7 @@ select.ui.dropdown {
 @media all and (-ms-high-contrast: none) {
   .ui.scrolling.dropdown .menu,
   .ui.dropdown .scrolling.menu {
-    min-width: calc(100% -  17px );
+    min-width: calc(100% - 17px);
   }
 }
 
@@ -26831,7 +26902,7 @@ select.ui.dropdown {
 
 @font-face {
   font-family: 'Dropdown';
-  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMggjB5AAAAC8AAAAYGNtYXAPfuIIAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5Zjo82LgAAAFwAAABVGhlYWQAQ88bAAACxAAAADZoaGVhAwcB6QAAAvwAAAAkaG10eAS4ABIAAAMgAAAAIGxvY2EBNgDeAAADQAAAABJtYXhwAAoAFgAAA1QAAAAgbmFtZVcZpu4AAAN0AAABRXBvc3QAAwAAAAAEvAAAACAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADw2gHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIPDa//3//wAAAAAAIPDX//3//wAB/+MPLQADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAIABJQElABMAABM0NzY3BTYXFhUUDwEGJwYvASY1AAUGBwEACAUGBoAFCAcGgAUBEgcGBQEBAQcECQYHfwYBAQZ/BwYAAQAAAG4BJQESABMAADc0PwE2MzIfARYVFAcGIyEiJyY1AAWABgcIBYAGBgUI/wAHBgWABwaABQWABgcHBgUFBgcAAAABABIASQC3AW4AEwAANzQ/ATYXNhcWHQEUBwYnBi8BJjUSBoAFCAcFBgYFBwgFgAbbBwZ/BwEBBwQJ/wgEBwEBB38GBgAAAAABAAAASQClAW4AEwAANxE0NzYzMh8BFhUUDwEGIyInJjUABQYHCAWABgaABQgHBgVbAQAIBQYGgAUIBwWABgYFBwAAAAEAAAABAADZuaKOXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAAAAACgAUAB4AQgBkAIgAqgAAAAEAAAAIABQAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAOAAAAAQAAAAAAAgAOAEcAAQAAAAAAAwAOACQAAQAAAAAABAAOAFUAAQAAAAAABQAWAA4AAQAAAAAABgAHADIAAQAAAAAACgA0AGMAAwABBAkAAQAOAAAAAwABBAkAAgAOAEcAAwABBAkAAwAOACQAAwABBAkABAAOAFUAAwABBAkABQAWAA4AAwABBAkABgAOADkAAwABBAkACgA0AGMAaQBjAG8AbQBvAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAaQBjAG8AbQBvAG8Abmljb21vb24AaQBjAG8AbQBvAG8AbgBSAGUAZwB1AGwAYQByAGkAYwBvAG0AbwBvAG4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('truetype'), url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAVwAAoAAAAABSgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAdkAAAHZLDXE/09TLzIAAALQAAAAYAAAAGAIIweQY21hcAAAAzAAAABMAAAATA9+4ghnYXNwAAADfAAAAAgAAAAIAAAAEGhlYWQAAAOEAAAANgAAADYAQ88baGhlYQAAA7wAAAAkAAAAJAMHAelobXR4AAAD4AAAACAAAAAgBLgAEm1heHAAAAQAAAAABgAAAAYACFAAbmFtZQAABAgAAAFFAAABRVcZpu5wb3N0AAAFUAAAACAAAAAgAAMAAAEABAQAAQEBCGljb21vb24AAQIAAQA6+BwC+BsD+BgEHgoAGVP/i4seCgAZU/+LiwwHi2v4lPh0BR0AAACIDx0AAACNER0AAAAJHQAAAdASAAkBAQgPERMWGyAlKmljb21vb25pY29tb29udTB1MXUyMHVGMEQ3dUYwRDh1RjBEOXVGMERBAAACAYkABgAIAgABAAQABwAKAA0AVgCfAOgBL/yUDvyUDvyUDvuUDvtvi/emFYuQjZCOjo+Pj42Qiwj3lIsFkIuQiY6Hj4iNhouGi4aJh4eHCPsU+xQFiIiGiYaLhouHjYeOCPsU9xQFiI+Jj4uQCA77b4v3FBWLkI2Pjo8I9xT3FAWPjo+NkIuQi5CJjogI9xT7FAWPh42Hi4aLhomHh4eIiIaJhosI+5SLBYaLh42HjoiPiY+LkAgO+92d928Vi5CNkI+OCPcU9xQFjo+QjZCLkIuPiY6Hj4iNhouGCIv7lAWLhomHh4iIh4eJhouGi4aNiI8I+xT3FAWHjomPi5AIDvvdi+YVi/eUBYuQjZCOjo+Pj42Qi5CLkImOhwj3FPsUBY+IjYaLhouGiYeHiAj7FPsUBYiHhomGi4aLh42Hj4iOiY+LkAgO+JQU+JQViwwKAAAAAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA8NoB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDw2v/9//8AAAAAACDw1//9//8AAf/jDy0AAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAABAAA5emozXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAUAAACAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIADgBHAAEAAAAAAAMADgAkAAEAAAAAAAQADgBVAAEAAAAAAAUAFgAOAAEAAAAAAAYABwAyAAEAAAAAAAoANABjAAMAAQQJAAEADgAAAAMAAQQJAAIADgBHAAMAAQQJAAMADgAkAAMAAQQJAAQADgBVAAMAAQQJAAUAFgAOAAMAAQQJAAYADgA5AAMAAQQJAAoANABjAGkAYwBvAG0AbwBvAG4AVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG4AUgBlAGcAdQBsAGEAcgBpAGMAbwBtAG8AbwBuAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('woff');
+  src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAVgAA8AAAAACFAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABWAAAABwAAAAchGgaq0dERUYAAAF0AAAAHAAAAB4AJwAPT1MvMgAAAZAAAABDAAAAVnW4TJdjbWFwAAAB1AAAAEsAAAFS8CcaqmN2dCAAAAIgAAAABAAAAAQAEQFEZ2FzcAAAAiQAAAAIAAAACP//AANnbHlmAAACLAAAAQoAAAGkrRHP9WhlYWQAAAM4AAAAMAAAADYPK8YyaGhlYQAAA2gAAAAdAAAAJANCAb1obXR4AAADiAAAACIAAAAiCBkAOGxvY2EAAAOsAAAAFAAAABQBnAIybWF4cAAAA8AAAAAfAAAAIAEVAF5uYW1lAAAD4AAAATAAAAKMFGlj5HBvc3QAAAUQAAAARgAAAHJoedjqd2ViZgAABVgAAAAGAAAABrO7W5UAAAABAAAAANXulPUAAAAA1r4hgAAAAADXu2Q1eNpjYGRgYOABYjEgZmJgBEIOIGYB8xgAA/YAN3jaY2BktGOcwMDKwMI4jTGNgYHBHUp/ZZBkaGFgYGJgZWbACgLSXFMYHFT/fLjFeOD/AQY9xjMMbkBhRpAcAN48DQYAeNpjYGBgZoBgGQZGBhDwAfIYwXwWBgMgzQGETAwMqn8+8H649f8/lHX9//9b7Pzf+fWgusCAkY0BzmUE6gHpQwGMDMMeAACbxg7SAAARAUQAAAAB//8AAnjadZBPSsNAGMXfS+yMqYgOhpSuSlKadmUhiVEhEMQzFF22m17BbbvzCh5BXCUn6EG8gjeQ4DepwYo4i+/ffL95j4EDA+CFC7jQuKyIeVHrI3wkleq9F7XrSInKteOeHdda8bOoaeepSc00NWPz/LRec9G8GabyGtEdF7h19z033GAMTK7zbM42xNEZpzYof0RtQ5CUHAQJ73OtVyutc+3b7Ou//b8XNlsPx3jgjUifABdhEohKJJL5iM5p39uqc7X1+sRQSqmGrUVhlsJ4lpmEUVwyT8SUYtg0P9DyNzPADDs+tjrGV6KRCRfsui3eHcL4/p8ZXvfMlcnEU+CLv7hDykOP+AKTPTxbAAB42mNgZGBgAGKuf5KP4vltvjLIMzGAwLV9ig0g+vruFFMQzdjACOJzMIClARh0CTJ42mNgZGBgPPD/AJD8wgAEjA0MjAyogAMAbOQEAQAAAAC7ABEAAAAAAKoAAAH0AAABgAAAAUAACAFAAAgAwAAXAAAAAAAAACoAKgAqADIAbACGAKAAugDSeNpjYGRgYOBkUGFgYgABEMkFhAwM/xn0QAIADdUBdAB42qWQvUoDQRSFv3GjaISUQaymSmGxJoGAsRC0iPYLsU50Y6IxrvlRtPCJJKUPIBb+PIHv4EN4djKuKAqCDHfmu+feOdwZoMCUAJNbAlYUMzaUlM14jjxbngOq7HnOia89z1Pk1vMCa9x7ztPkzfMyJbPj+ZGi6Xp+omxuPD+zaD7meaFg7mb8GrBqHmhwxoAxlm0uiRkpP9X5m26pKRoMxTGR1D49Dv/Yb/91o6l8qL6eu5n2hZQzn68utR9m3FU2cB4t9cdSLG2utI+44Eh/P9bqKO+oJ/WxmXssj77YkrjasZQD6SFddythk3Wtzrf+UF2p076Udla1VNzsERP3kkjVRKel7mp1udXYcHtZSlV7RfmJe1GiFWveluaeKD5/MuJcSk8Tpm/vvwPIbmJleNpjYGKAAFYG7ICTgYGRiZGZkYWRlZGNkZ2Rg5GTLT2nsiDDEEIZsZfmZRqZujmDaDcDAxcI7WIOpS2gtCWUdgQAZkcSmQAAAAFblbO6AAA=) format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -26873,26 +26944,23 @@ select.ui.dropdown {
   content: "\f0da" ;
 }
 
-/* Icons for Reference
-.dropdown.down.icon {
-  content: "\f0d7";
+.ui.dropdown > .clear.icon:before {
+  content: "\f00d";
 }
-.dropdown.up.icon {
-  content: "\f0d8";
-}
-.dropdown.left.icon {
-  content: "\f0d9";
-}
-.dropdown.icon.icon {
-  content: "\f0da";
-}
+
+/* Icons for Reference (Subsetted in 2.4.0)
+  .dropdown.down:before { content: "\f0d7"; }
+  .dropdown.up:before { content: "\f0d8"; }
+  .dropdown.left:before { content: "\f0d9"; }
+  .dropdown.right:before { content: "\f0da"; }
+  .dropdown.close:before { content: "\f00d"; }
 */
 
 /*******************************
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Search
+ * # Semantic UI 2.4.2 - Search
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -26955,6 +27023,8 @@ select.ui.dropdown {
   -webkit-transform-origin: center top;
   transform-origin: center top;
   white-space: normal;
+  text-align: left;
+  text-transform: none;
   background: #FFFFFF;
   margin-top: 0.5em;
   width: 18em;
@@ -27362,7 +27432,7 @@ select.ui.dropdown {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Tab
+ * # Semantic UI 2.4.2 - Tab
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -27450,7 +27520,7 @@ select.ui.dropdown {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Transition
+ * # Semantic UI 2.4.2 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *
